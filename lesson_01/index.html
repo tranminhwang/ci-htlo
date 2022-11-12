@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      src="https://unpkg.com/react@18/umd/react.development.js"
+      crossorigin
+    ></script>
+    <script
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+      crossorigin
+    ></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+    <style>
+      #btn-change {
+        color: red;
+      }
+
+      #root .hahah {
+        color: red;
+      }
+      .user {
+        width: 400px;
+        background-color: gray;
+        padding: 20px;
+        border-radius: 8px;
+        margin-bottom: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="title" class="title-class">Hello World</h1>
+    <button id="btn-change">Change color</button>
+    <div id="root">
+      hhhhahahah
+      <div class="hahah">hahah</div>
+    </div>
+
+    <div id="user-container"></div>
+    <!-- <script src="./app.js"></script> -->
+    <div id="react-root"></div>
+    <script type="text/babel">
+      const reactElement = <li>Hello</li>;
+
+      const root = ReactDOM.createRoot(document.getElementById("react-root"));
+      root.render(reactElement);
+    </script>
+  </body>
+</html>
