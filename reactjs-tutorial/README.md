@@ -12,7 +12,7 @@
 # Phân biệt giữa DOMElement với ReactElement
 
 - Đối với DOMElement phải tạo thông qua `document.createElement(tag name)`
-- Đối với ReactJS thì khi chúng ta link 2 file CDN ở trên thì sẽ có 1 object global có tên là `React` => cách tạo 1 ReactElement; `React.createElement(tag name, props, chilrend)`
+- Đối với ReactJS thì khi chúng ta link 2 file CDN ở trên thì sẽ có 1 object global có tên là `React` => cách tạo 1 ReactElement; `React.createElement(tag name, props, children)`
 
 Ví dụ:
 
@@ -46,6 +46,11 @@ Xem code của file `index.html` trong folder `lesson-02` để có thể thực
   <li>List Item 2</li>
 </ul>
 ```
+
+# Render DOMElement và ReactElement
+
+Phải dùng `ReactDOM` để render `React Element` vào trang web
+Xem ví dụ trong file `index.html` của `lesson-02`
 
 # JSX
 
