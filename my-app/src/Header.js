@@ -3,23 +3,23 @@ import "./Header.css";
 function Header() {
   return (
     <nav id="navbar">
-      <ul class="nav">
-        <li class="logo">
+      <ul className="nav">
+        <li className="logo">
           <a href="#logo">mindX School</a>
         </li>
-        <li class="item">
+        <li className="item">
           <a href="#welcome-section">About</a>
         </li>
-        <li class="item">
+        <li className="item">
           <a href="#projects">Project</a>
         </li>
-        <li class="item">
+        <li className="item">
           <a href="#contact">Contact</a>
         </li>
-        <li class="item button">
+        <li className="item button">
           <a href="#">Log In</a>
         </li>
-        <li class="item button secondary">
+        <li className="item button secondary">
           <a href="#">Sign Up</a>
         </li>
       </ul>
