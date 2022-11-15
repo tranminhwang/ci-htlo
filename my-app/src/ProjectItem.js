@@ -1,16 +1,13 @@
 import "./ProjectItem.css";
 
-function ProjectItem() {
+function ProjectItem(props) {
   return (
     <a href="#welcome-section" target="_blank" className="project project-tile">
-      <img
-        className="project-image"
-        src="https://resources.mindx.edu.vn/uploads/images/anh%20web-02.png"
-        alt="project"
-      />
+      <img className="project-image" src={props.thum} alt="project" />
       <p className="project-title">
-        <span className="code">&lt;</span>
-        Sample 1<span className="code">&#47;&gt;</span>
+        <span className="code"></span>
+        {props.title}
+        <span className="code"></span>
       </p>
     </a>
   );
