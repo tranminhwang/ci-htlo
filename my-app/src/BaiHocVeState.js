@@ -1,13 +1,9 @@
 import { useState } from "react";
 
 function BaiHocVeState() {
-  let myState = useState(0);
-  let currentNumber = myState[0];
-  let setMyState = myState[1];
+  const [currentNumber, setCurrentNumber] = useState(0);
   let checked = true;
-
   // Render 1 element or 1 component theo 1 dieu kien
-
   let soChan = false;
   //   let titleElement =
   //     soChan === true ? (
@@ -26,9 +22,7 @@ function BaiHocVeState() {
   }
 
   function congLen_1() {
-    currentNumber += 1;
-    console.log("currentNumber", currentNumber);
-    setMyState(currentNumber);
+    setCurrentNumber(currentNumber + 1);
     if (kiemTraSoChan(currentNumber) === true) {
       checked = true;
     } else {
