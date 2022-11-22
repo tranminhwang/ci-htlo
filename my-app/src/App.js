@@ -4,6 +4,7 @@ import Contact from "./Contact";
 import Footer from "./Footer";
 import BaiTapDoiMauXe from "./BaiTapDoiMauXe";
 import BaiHocVeState from "./BaiHocVeState";
+import ColorBox from "./ColorBox";
 import { useState } from "react";
 
 import "./App.css";
@@ -11,7 +12,9 @@ import "./App.css";
 function App() {
   return (
     <div className="App">
-      <BaiHocVeState />
+      <ColorBox />
+      <BaiTapDoiMauXe />
+      {/* <BaiHocVeState /> */}
       {/* <BaiTapDoiMauXe /> */}
       {/* <Header />
       <section id="welcome-section" className="welcome-section">

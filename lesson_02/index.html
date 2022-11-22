@@ -25,102 +25,31 @@
       const rootEl = document.getElementById("root");
       const reactDOMRoot = ReactDOM.createRoot(rootEl);
 
-      //   const h1El = document.createElement("h1"); // DOM element
-      //   h1El.innerText = "Hello";
-      //   h1El.id = "my-id";
-      //   h1El.style = "background: red; text-align: center;";
-      //   h1El.className = "my-tile";
-
-      //   rootEl.appendChild(h1El);
-
-      //   const h1ReactEl = React.createElement(
-      //     "h1",
-      //     {
-      //       className: "my-class",
-      //       id: "my-id",
-      //     },
-      //     "Hello React"
-      //   );
-
-      //   console.log(reactDOMRoot);
-      //   reactDOMRoot.render(h1ReactEl);
-
-      //   console.dir(h1El);
-      //   console.log(h1ReactEl);
-
-      // DOM
-      const ulDOM = document.createElement("ul");
-      const listDOM_1 = document.createElement("li");
-      listDOM_1.innerText = "Item 1";
-
-      const listDOM_2 = document.createElement("li");
-      listDOM_2.innerText = "Item 2";
-
-      const listDOM_3 = document.createElement("li");
-      listDOM_3.innerText = "Item 3";
-
-      ulDOM.appendChild(listDOM_1);
-      ulDOM.appendChild(listDOM_2);
-      ulDOM.appendChild(listDOM_3);
-      //   rootEl.appendChild(ulDOM);
-      // //  React
-      //     const ulReact = React.createElement(
-      //       "ul",
-      //       null,
-      //       React.createElement(
-      //         "li",
-      //         null,
-      //         "Item 1",
-      //       React.createElement("li", null, "Item 2"),
-      //       React.createElement("li", null, "Item 3")
-      //     );
-
-      const ul = React.createElement("ul", null, [
-        React.createElement("li", null, "List Item 1"),
-        React.createElement("li", null, "List Item 2"),
-        React.createElement("li", null, "List Item 3"),
-      ]);
-      console.log(ul);
-
-      const myStyle = {
-        color: "red",
-        backgroundColor: "blue",
-      };
-
-      function sum(a, b) {
-        return a + b;
-      }
-
-      //   const elements = (
-      //     <ul style={myStyle}>
-      //       <li>{sum(1, 0)}</li>
-      //       <li>{sum(4, 5)}</li>
-      //       <li>{sum(1, 2)}</li>
-      //     </ul>
-      //   );
-
-      const containers = (
-        <React.Fragment>
-          <React.Fragment>
-            <h1>Heading</h1>
-            <h2>Heading 2</h2>
-          </React.Fragment>
-
-          <React.Fragment>
-            <h1>Heading</h1>
-            <h2>Heading 2</h2>
-          </React.Fragment>
-        </React.Fragment>
+      /*
+      <div class="App">
+        <h1>0 là số chẵn</h1>
+        <button style="padding: 8px 24px;">+</button>
+     </div>
+      */
+      const DOM_That = React.createElement(
+        "div",
+        {
+          className: "App",
+        },
+        [React.createElement("h1", null, "0 là số chẵn")]
       );
 
-      //   const containers = React.createElement(
-      //     React.Fragment,
-      //     null,
-      //     React.createElement("h1", null, "Heading"),
-      //     React.createElement("h2", null, "Heading 2")
-      //   );
+      const DOM_ao = React.createElement(
+        "div",
+        {
+          className: "App",
+        },
+        [React.createElement("h1", null, "1 là số chẵn")]
+      );
 
-      const PI = 1;
+      console.log("DOM_That", DOM_That);
+      console.log("DOM_ao", DOM_ao);
+
       reactDOMRoot.render(containers);
     </script>
   </body>
