@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- <h2>My Timer</h2>
+    <h1 id="timerEl">0</h1> -->
+    <div id="counter">0</div>
+    <button id="cong">+</button>
+    <button id="tru">-</button>
+
+    <script>
+      // const timerEl = document.getElementById("timerEl");
+
+      // function getCurrentTimer() {
+      //   const date = new Date();
+      //   return date.getSeconds();
+      // }
+
+      // setInterval(() => {
+      //   timerEl.innerText = getCurrentTimer();
+      // }, 1000);
+      const counterEl = document.getElementById("counter");
+      const congButton = document.getElementById("cong");
+      const truButton = document.getElementById("tru");
+
+      congButton.addEventListener("click", () => {
+        let currentCounter = Number(counterEl.innerText);
+        counterEl.innerText = currentCounter + 1;
+      });
+
+      truButton.addEventListener("click", () => {
+        let currentCounter = Number(counterEl.innerText);
+        counterEl.innerText = currentCounter - 1;
+      });
+    </script>
+  </body>
+</html>
