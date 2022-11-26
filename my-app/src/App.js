@@ -5,6 +5,8 @@ import Footer from "./Footer";
 import BaiTapDoiMauXe from "./BaiTapDoiMauXe";
 import BaiHocVeState from "./BaiHocVeState";
 import ColorBox from "./ColorBox";
+import MyForm from "./MyForm";
+import TodoApp from "./TodoApp";
 import { useState } from "react";
 
 import "./App.css";
@@ -12,8 +14,10 @@ import "./App.css";
 function App() {
   return (
     <div className="App">
-      <ColorBox />
-      <BaiTapDoiMauXe />
+      <TodoApp />
+      {/* <MyForm /> */}
+      {/* <ColorBox />
+      <BaiTapDoiMauXe /> */}
       {/* <BaiHocVeState /> */}
       {/* <BaiTapDoiMauXe /> */}
       {/* <Header />

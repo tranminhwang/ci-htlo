@@ -1,0 +1,60 @@
+.todo-app-wrapper {
+  width: 420px;
+  margin: 0 auto;
+  background: red;
+  padding: 12px 24px;
+  border-radius: 8px;
+  margin-top: 30px;
+}
+
+.todo-app-title {
+  margin-bottom: 20px;
+}
+
+.todo-form {
+  display: flex;
+  margin-bottom: 15px;
+}
+
+.todo-input {
+  flex: 1;
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+  margin-right: 8px;
+}
+
+.todo-add-button {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+  cursor: pointer;
+}
+
+.todo-container {
+}
+
+.todo-item,
+.clear-all-items {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.todo-item span,
+.clear-all-items p {
+  flex: 1;
+  color: white;
+  font-weight: bold;
+}
+
+.todo-item button,
+.clear-all-items button {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+  cursor: pointer;
+}
