@@ -1,11 +1,13 @@
 import TodoItem from "./TodoItem";
 
-const TodoListContainer = () => {
+const TodoListContainer = (props) => {
+  const { taks } = props;
+
   return (
     <div className="todo-container">
-      <TodoItem />
-      <TodoItem />
-      <TodoItem />
+      {taks.map((task) => (
+        <TodoItem title={task.title} taskId={task.id} />
+      ))}
     </div>
   );
 };

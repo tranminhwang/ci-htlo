@@ -1,7 +1,9 @@
-const TodoItem = () => {
+const TodoItem = (props) => {
+  const { title } = props;
+
   return (
     <div className="todo-item">
-      <span>Item 1</span>
+      <span>{title}</span>
       <button>X</button>
     </div>
   );
