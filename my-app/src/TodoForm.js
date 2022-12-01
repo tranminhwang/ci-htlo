@@ -5,6 +5,7 @@ const TodoForm = (props) => {
     e.preventDefault();
     const todoText = e.target.todoInput.value;
     addTodo(todoText);
+    e.target.todoInput.value = "";
   };
 
   return (

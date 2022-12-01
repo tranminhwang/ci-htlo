@@ -1,10 +1,15 @@
 const TodoItem = (props) => {
-  const { title } = props;
-
+  const { title, taskId, isDone, removeTodo, toggleDoneTask } = props;
+  console.log(taskId);
   return (
     <div className="todo-item">
-      <span>{title}</span>
-      <button>X</button>
+      <span
+        className={isDone ? "done" : ""}
+        onDoubleClick={() => toggleDoneTask(taskId)}
+      >
+        {title}
+      </span>
+      <button onClick={() => removeTodo(taskId)}>X</button>
     </div>
   );
 };

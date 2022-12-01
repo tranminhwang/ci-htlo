@@ -50,6 +50,10 @@
   font-weight: bold;
 }
 
+.todo-item span.done {
+  text-decoration: line-through;
+}
+
 .todo-item button,
 .clear-all-items button {
   padding: 8px 12px;
