@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import ClassComponent from "./ClassComponent";
+import WorldCupDashboard from "./FifaDashboard";
 import FunctionComponent from "./FunctionComponent";
 import ScrollComponent from "./ScrollComponent";
 
@@ -20,19 +21,21 @@ const App = () => {
   // console.log("Render");
   return (
     <div
-      style={{
-        height: "200vh",
-      }}
+    // style={{
+    //   height: "200vh",
+    // }}
     >
-      {visible && <ScrollComponent />}
+      {/* {visible && <ScrollComponent />}
       <button onClick={onToggleScrollComponent}>
         Toggle Scroll ScrollComponent
       </button>
       <h2>Lesson Use Effect</h2>
       <p>Count: {count}</p>
-      <button onClick={onIncreaseCount}>Click</button>
+      <button onClick={onIncreaseCount}>Click</button> */}
       {/* <ClassComponent /> */}
       {/* <FunctionComponent /> */}
+
+      <WorldCupDashboard />
     </div>
   );
 };
