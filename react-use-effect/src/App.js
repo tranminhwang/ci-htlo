@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from "react";
+import ClassComponent from "./ClassComponent";
+import FunctionComponent from "./FunctionComponent";
 import ScrollComponent from "./ScrollComponent";
 
 const App = () => {
@@ -6,14 +8,16 @@ const App = () => {
   const [visible, setVisible] = useState(true);
 
   // useEffect for update title
-  useEffect(() => {
-    console.log("Effect update title runs");
-    document.title = `Lesson use effects ${count}`;
-  }, [count]);
+  // useEffect(() => {
+  //   console.log("Effect update title runs");
+  //   if (count <= 5) {
+  //     document.title = `Lesson use effects ${count}`;
+  //   }
+  // }, [count]);
 
   const onIncreaseCount = () => setCount((prev) => prev + 1);
   const onToggleScrollComponent = () => setVisible((prev) => !prev);
-  console.log("Render");
+  // console.log("Render");
   return (
     <div
       style={{
@@ -27,6 +31,8 @@ const App = () => {
       <h2>Lesson Use Effect</h2>
       <p>Count: {count}</p>
       <button onClick={onIncreaseCount}>Click</button>
+      {/* <ClassComponent /> */}
+      {/* <FunctionComponent /> */}
     </div>
   );
 };
