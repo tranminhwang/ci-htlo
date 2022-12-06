@@ -7,27 +7,33 @@ import BaiHocVeState from "./BaiHocVeState";
 import ColorBox from "./ColorBox";
 import MyForm from "./MyForm";
 import TodoApp from "./TodoApp";
-import { useState } from "react";
+// import Modal from "./Modal";
+import { ContextDemoProvider } from "./ContextDemo";
+// import projectData from "./mockData/productMock";
+import { useEffect, useState } from "react";
 
 import "./App.css";
 
 function App() {
   return (
     <div className="App">
-      <TodoApp />
+      {/* <TodoApp /> */}
       {/* <MyForm /> */}
       {/* <ColorBox />
       <BaiTapDoiMauXe /> */}
       {/* <BaiHocVeState /> */}
       {/* <BaiTapDoiMauXe /> */}
-      {/* <Header />
-      <section id="welcome-section" className="welcome-section">
+
+      {/* <section id="welcome-section" className="welcome-section">
         <h1>Hey I am mindXer</h1>
         <p>A Full Stack Web Developer</p>
-      </section>
-      <ProjectList />
-      <Contact />
-      <Footer /> */}
+      </section> */}
+      <ContextDemoProvider>
+        <Header />
+        <ProjectList />
+      </ContextDemoProvider>
+      {/* <Contact /> */}
+      <Footer />
     </div>
   );
 }
