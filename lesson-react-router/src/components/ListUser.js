@@ -1,18 +1,11 @@
-import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { useCallAPI } from "./useAuth";
 
 const ListUser = () => {
-  const [users, setUsers] = useState([]);
-
-  useEffect(() => {
-    fetch("https://reqres.in/api/users?page=2")
-      .then((req) => req.json())
-      .then(({ data }) => setUsers(data));
-  }, []);
-
+  const { data = [] } = useCallAPI("https://reqres.in/api/users?page=2");
   return (
     <div>
-      {users.map((user) => (
+      {data.map((user) => (
         <div>
           <img src={user.avatar} />
           <h2>{user.email}</h2>

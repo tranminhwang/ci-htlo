@@ -8,6 +8,7 @@ import Contact from "./components/Contact";
 import Login from "./components/Login";
 import ListUser from "./components/ListUser";
 import NotFound from "./components/NotFound";
+import PrivateRoutes from "./components/PrivateRoutes";
 
 import "./App.css";
 
@@ -16,11 +17,13 @@ function App() {
     <div className="App">
       <Header />
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route element={<PrivateRoutes />}>
+          <Route path="/" element={<Home />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/list-users" element={<ListUser />} />
+          <Route path="/list-users/:userId" element={<DetailUser />} />
+        </Route>
         <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/list-users" element={<ListUser />} />
-        <Route path="/list-users/:userId" element={<DetailUser />} />
         <Route path="/login" element={<Login />} />
         <Route path="*" element={<NotFound />} />
       </Routes>

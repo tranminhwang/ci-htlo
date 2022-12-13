@@ -1,18 +1,31 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import { useAuth } from "./useAuth";
+
+import HinhTron from "./HinhTron";
+import HinhVuong from "./HinhVuong";
+import HinhTamGiac from "./HinhTamGiac";
 
 const Login = () => {
   const [pwd, setPwd] = useState("");
+  let isLogin = useAuth();
   const navigate = useNavigate();
   let currentPwd = "123@";
+
+  useEffect(() => {
+    if (isLogin) {
+      navigate("/");
+    }
+  }, []);
 
   const handleLogin = () => {
     // do something...
     // call API
     if (pwd === currentPwd) {
-      setTimeout(() => {
-        navigate("/");
-      }, 3000);
+      localStorage.setItem("isLogin", true);
+      navigate("/");
+    } else {
+      alert("Dang nhap sai");
     }
   };
 
@@ -20,6 +33,10 @@ const Login = () => {
     <div>
       <input onChange={(e) => setPwd(e.target.value)} />
       <button onClick={handleLogin}>Login</button>
+
+      <HinhTron />
+      <HinhVuong />
+      <HinhTamGiac />
     </div>
   );
 };
