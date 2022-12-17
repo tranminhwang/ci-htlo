@@ -1,4 +1,4 @@
-import { useRandomColor } from "./customHook";
+import { useRandomColor } from "../hooks/customHook";
 
 const HinhVuong = () => {
   const color = useRandomColor();

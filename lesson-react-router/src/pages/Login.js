@@ -1,10 +1,10 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { useAuth } from "./useAuth";
+import { useAuth } from "../hooks/useAuth";
 
-import HinhTron from "./HinhTron";
-import HinhVuong from "./HinhVuong";
-import HinhTamGiac from "./HinhTamGiac";
+import HinhTron from "../components/HinhTron";
+import HinhVuong from "../components/HinhVuong";
+import HinhTamGiac from "../components/HinhTamGiac";
 
 const Login = () => {
   const [pwd, setPwd] = useState("");
@@ -16,7 +16,7 @@ const Login = () => {
     if (isLogin) {
       navigate("/");
     }
-  }, []);
+  }, [isLogin, navigate]);
 
   const handleLogin = () => {
     // do something...

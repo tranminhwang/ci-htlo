@@ -2,12 +2,12 @@ import { Routes, Route } from "react-router-dom";
 
 import DetailUser from "./components/DetailUser";
 import Header from "./components/Header";
-import Home from "./components/Home";
-import About from "./components/About";
-import Contact from "./components/Contact";
-import Login from "./components/Login";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
+import Login from "./pages/Login";
 import ListUser from "./components/ListUser";
-import NotFound from "./components/NotFound";
+import NotFound from "./pages/NotFound";
 import PrivateRoutes from "./components/PrivateRoutes";
 
 import "./App.css";

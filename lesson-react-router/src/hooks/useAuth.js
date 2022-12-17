@@ -12,7 +12,7 @@ export const useCallAPI = (url) => {
     fetch(url)
       .then((res) => res.json())
       .then((data) => setData(data));
-  }, []);
+  }, [url]);
 
   if (data === undefined) {
     return [];

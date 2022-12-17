@@ -1,5 +1,5 @@
 import { NavLink, useNavigate } from "react-router-dom";
-import { useAuth } from "./useAuth";
+import { useAuth } from "../hooks/useAuth";
 
 const Header = () => {
   const navigate = useNavigate();

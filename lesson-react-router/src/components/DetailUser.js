@@ -1,6 +1,5 @@
-import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { useCallAPI } from "./useAuth";
+import { useCallAPI } from "../hooks/useAuth";
 
 const DetailUser = () => {
   const { userId } = useParams();

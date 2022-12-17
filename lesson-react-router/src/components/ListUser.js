@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { useCallAPI } from "./useAuth";
+import { useCallAPI } from "../hooks/useAuth";
 
 const ListUser = () => {
   const { data = [] } = useCallAPI("https://reqres.in/api/users?page=2");
