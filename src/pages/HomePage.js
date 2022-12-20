@@ -1,19 +1,23 @@
-import { Container, Grid } from "@nextui-org/react";
+import { Container, Grid, Loading } from "@nextui-org/react";
 import SearchMovie from "../components/SerchMovie";
 import MovieItem from "../components/MovieItem";
-import mockMovies from "../mocks/mockMovies.json";
+import { useGetNowPlaying } from "../hooks/useMovies";
 
 const HomePage = () => {
-  const movies = mockMovies.results;
+  const { movies, loading } = useGetNowPlaying();
 
   return (
     <Container>
       <SearchMovie />
-      <Grid.Container gap={2}>
-        {movies.map((movie) => (
-          <MovieItem movieData={movie} />
-        ))}
-      </Grid.Container>
+      {loading ? (
+        <Loading />
+      ) : (
+        <Grid.Container gap={2}>
+          {movies.map((movie) => (
+            <MovieItem movieData={movie} />
+          ))}
+        </Grid.Container>
+      )}
     </Container>
   );
 };

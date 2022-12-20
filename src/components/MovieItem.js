@@ -2,7 +2,7 @@ import { Grid, Card, Text, Row, Col, Button } from "@nextui-org/react";
 
 const MovieItem = (props) => {
   const { movieData } = props;
-  console.log(movieData);
+
   return (
     <Grid xs={3}>
       <Card css={{ w: "100%", h: "400px" }}>
@@ -12,7 +12,7 @@ const MovieItem = (props) => {
             objectFit="cover"
             width="100%"
             height="100%"
-            alt="Relaxing app background"
+            alt={movieData.title}
           />
         </Card.Body>
         <Card.Footer
