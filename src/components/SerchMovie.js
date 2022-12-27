@@ -1,7 +1,9 @@
 import { Spacer, Input, Button } from "@nextui-org/react";
+import { useState } from "react";
 import "./SearchMovie.css";
 
-const SearchMovie = () => {
+const SearchMovie = ({ searchMovie }) => {
+  const [searchKeyword, setSearchKeyword] = useState("");
   return (
     <>
       <Spacer y={2} />
@@ -12,8 +14,11 @@ const SearchMovie = () => {
             marginRight: "0.5rem",
           }}
           placeholder="Search movie"
+          onChange={(event) => setSearchKeyword(event.target.value)}
         />
-        <Button auto>Search</Button>
+        <Button auto onClick={() => searchMovie(searchKeyword)}>
+          Search
+        </Button>
       </div>
     </>
   );

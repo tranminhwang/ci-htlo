@@ -17,3 +17,10 @@ export const getMovieDetail = async (movie_id, api_key) => {
   );
   return data;
 };
+
+export const searchMovieService = async (keyword, api_key) => {
+  const { data } = await axios.get(
+    `https://api.themoviedb.org/3/search/keyword?api_key=${api_key}&query=${keyword}&page=1`
+  );
+  return data.results;
+};

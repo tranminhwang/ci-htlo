@@ -9,7 +9,11 @@ const MovieItem = (props) => {
       <Card css={{ w: "100%", h: "400px" }}>
         <Card.Body css={{ p: 0 }}>
           <Card.Image
-            src={`https://www.themoviedb.org/t/p/w440_and_h660_face/${movieData.poster_path}`}
+            src={
+              movieData.poster_path
+                ? `https://www.themoviedb.org/t/p/w440_and_h660_face/${movieData.poster_path}`
+                : "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Elon_Musk_Royal_Society_%28crop2%29.jpg/1200px-Elon_Musk_Royal_Society_%28crop2%29.jpg"
+            }
             objectFit="cover"
             width="100%"
             height="100%"
@@ -30,12 +34,12 @@ const MovieItem = (props) => {
             <Col>
               <Row>
                 <Text color="#d1d1d1" size={24}>
-                  {movieData.title}
+                  {movieData.title || movieData.name}
                 </Text>
               </Row>
               <Row>
                 <Text color="#d1d1d1" size={12}>
-                  {movieData.release_date}
+                  {movieData.release_date || "N/A"}
                 </Text>
               </Row>
             </Col>
