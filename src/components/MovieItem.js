@@ -1,4 +1,5 @@
 import { Grid, Card, Text, Row, Col, Button } from "@nextui-org/react";
+import { Link } from "react-router-dom";
 
 const MovieItem = (props) => {
   const { movieData } = props;
@@ -46,14 +47,16 @@ const MovieItem = (props) => {
                   rounded
                   css={{ color: "#94f9f0", bg: "#94f9f026" }}
                 >
-                  <Text
-                    css={{ color: "inherit" }}
-                    size={12}
-                    weight="bold"
-                    transform="uppercase"
-                  >
-                    Xem chi tiết
-                  </Text>
+                  <Link to={`/detail/${movieData.id}`}>
+                    <Text
+                      css={{ color: "inherit" }}
+                      size={12}
+                      weight="bold"
+                      transform="uppercase"
+                    >
+                      Xem chi tiết
+                    </Text>
+                  </Link>
                 </Button>
               </Row>
             </Col>
