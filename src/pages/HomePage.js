@@ -12,7 +12,12 @@ const HomePage = () => {
       {loading ? (
         <Loading />
       ) : (
-        <Grid.Container gap={2}>
+        <Grid.Container
+          gap={2}
+          css={{
+            padding: "4rem 0",
+          }}
+        >
           {movies.map((movie) => (
             <MovieItem movieData={movie} />
           ))}

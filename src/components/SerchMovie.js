@@ -9,6 +9,7 @@ const SearchMovie = () => {
         <Input
           css={{
             flex: 1,
+            marginRight: "0.5rem",
           }}
           placeholder="Search movie"
         />

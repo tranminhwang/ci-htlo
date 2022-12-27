@@ -4,7 +4,7 @@ const MovieItem = (props) => {
   const { movieData } = props;
 
   return (
-    <Grid xs={3}>
+    <Grid md={3} sm={4} xs={6}>
       <Card css={{ w: "100%", h: "400px" }}>
         <Card.Body css={{ p: 0 }}>
           <Card.Image

@@ -6,7 +6,7 @@ const Header = () => {
     <Navbar>
       <Navbar.Brand>
         <Text h2>
-          <Link to="/">Mindx Movie</Link>
+          <Link to="/">MindX Movie</Link>
         </Text>
       </Navbar.Brand>
       <Navbar.Content>
