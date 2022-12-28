@@ -11,23 +11,30 @@ export const useGetNowPlaying = () => {
   const [loading, setLoading] = useState(false);
 
   const searchMovie = (keyword) => {
-    searchMovieService(keyword, THEMOVIE_DB_API_KEY).then((res) =>
-      setMovies(res)
-    );
+    setLoading(true);
+    searchMovieService(keyword, THEMOVIE_DB_API_KEY)
+      .then((res) => setMovies(res))
+      .finally(() => {
+        setLoading(false);
+      });
   };
-
-  useEffect(() => {
+  const getNowPlaying = () => {
     setLoading(true);
     getNowPlayingMovies(THEMOVIE_DB_API_KEY)
       .then((results) => setMovies(results))
       .finally(() => {
         setLoading(false);
       });
+  };
+
+  useEffect(() => {
+    getNowPlaying();
   }, []);
 
   return {
     movies,
     loading,
+    getNowPlaying,
     searchMovie,
   };
 };

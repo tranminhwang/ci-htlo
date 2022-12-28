@@ -20,7 +20,14 @@ export const getMovieDetail = async (movie_id, api_key) => {
 
 export const searchMovieService = async (keyword, api_key) => {
   const { data } = await axios.get(
-    `https://api.themoviedb.org/3/search/keyword?api_key=${api_key}&query=${keyword}&page=1`
+    `https://api.themoviedb.org/3/search/movie?api_key=${api_key}&language=en-US&query=${keyword}&page=1&include_adult=false`
+  );
+  return data.results;
+};
+
+export const getMovieVideo = async (movie_id, api_key) => {
+  const { data } = await API_URL.get(
+    `/${movie_id}/videos?api_key=${api_key}&language=en-US`
   );
   return data.results;
 };

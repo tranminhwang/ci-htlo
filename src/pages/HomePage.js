@@ -4,11 +4,11 @@ import MovieItem from "../components/MovieItem";
 import { useGetNowPlaying } from "../hooks/useMovies";
 
 const HomePage = () => {
-  const { movies, loading, searchMovie } = useGetNowPlaying();
+  const { movies, loading, searchMovie, getNowPlaying } = useGetNowPlaying();
 
   return (
     <Container>
-      <SearchMovie searchMovie={searchMovie} />
+      <SearchMovie searchMovie={searchMovie} getNowPlaying={getNowPlaying} />
       {loading ? (
         <Loading />
       ) : (

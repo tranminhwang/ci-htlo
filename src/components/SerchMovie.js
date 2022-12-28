@@ -2,13 +2,15 @@ import { Spacer, Input, Button } from "@nextui-org/react";
 import { useState } from "react";
 import "./SearchMovie.css";
 
-const SearchMovie = ({ searchMovie }) => {
+const SearchMovie = ({ searchMovie, getNowPlaying }) => {
   const [searchKeyword, setSearchKeyword] = useState("");
   return (
     <>
       <Spacer y={2} />
       <div className="search-wrap">
         <Input
+          clearable
+          onClearClick={getNowPlaying}
           css={{
             flex: 1,
             marginRight: "0.5rem",
